@@ -62,7 +62,7 @@ export default () => {
         <h1 className="font-semibold w-full text-2xl xl:text-4xl mb-4 text-center xl:text-left">
           Requerimientos
         </h1>
-        <div className="grid grid-cols-2 xl:grid-cols-5 gap-2 xl:gap-8 w-full xl:w-[80%] mx-auto p-2 h-full">
+        <div className="grid grid-cols-2 grid-rows-3 xl:grid-rows-1 xl:grid-cols-5 gap-2 xl:gap-8 w-full xl:w-[80%] mx-auto p-2 h-full">
           {requerimientos.map((r, i) => (
             <div
               key={r.name}
