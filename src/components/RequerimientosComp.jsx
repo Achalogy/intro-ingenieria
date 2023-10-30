@@ -7,7 +7,7 @@ export const requerimientos = [
     name: "Dinero",
     IconComp: IconCoin,
     description:
-      "Se necesitan alrededor de 1'200.000 jardines en todo Bogotá con dinero recaudado en conjunto con la secretaria de ambiente y el distrito. Esto equivale al menos a 11 Billones de pesos.",
+      "Se necesitan alrededor de 1'200.000 jardines en todo Bogotá con dinero recaudado en conjunto con la secretaria de ambiente y el distrito. Esto equivale al menos a 30.000 millones de pesos.",
     img: "https://alponiente.com/wp-content/uploads/2021/11/OVRCF3SJERFWNA5EP633KZJRWY.jpg",
   },
   {
