@@ -30,8 +30,15 @@ import { ViewTransitions } from "astro:transitions";
         scroll-behavior: smooth;
       }
 
-      ul , li {
+      ul, ul > li {
         list-style: disc;
+        list-style-position: inside;
+        margin-left: .5rem;
+        @apply text-slate-800
+      }
+
+      ol, ol > li {
+        list-style: decimal;
         list-style-position: inside;
         margin-left: .5rem;
         @apply text-slate-800

@@ -1,4 +1,4 @@
-import { IconHammer } from "@tabler/icons-react";
+import { IconHammer, IconStairs } from "@tabler/icons-react";
 import { IconCoin, IconHeartHandshake, IconWall } from "@tabler/icons-react";
 import { useState } from "react";
 
@@ -7,7 +7,7 @@ export const requerimientos = [
     name: "Dinero",
     IconComp: IconCoin,
     description:
-      "Se necesitan alrededor de 1'200.000 jardines en todo Bogotá con dinero recaudado en conjunto con la secretaria de ambiente y el distrito. Esto equivale almenos a 11 Billones de pesos.",
+      "Se necesitan alrededor de 1'200.000 jardines en todo Bogotá con dinero recaudado en conjunto con la secretaria de ambiente y el distrito. Esto equivale al menos a 11 Billones de pesos.",
     img: "https://alponiente.com/wp-content/uploads/2021/11/OVRCF3SJERFWNA5EP633KZJRWY.jpg",
   },
   {
@@ -31,6 +31,26 @@ export const requerimientos = [
       "Nos encargaremos del mantenimiento de los jardines, lo cual incluye reparar los jardines, mantener firmes las lonas, monitorear las plantas y regarlas si es necesario.",
     img: "https://i.imgur.com/unJLQZc.png",
   },
+  {
+    name: "Metodología",
+    IconComp: IconStairs,
+    description: (
+      <>
+        <ol>
+          <li>Estudio ambiental de la zona </li>
+          <li>Estudio estructural a las fachadas</li>
+          <li>Análisis de viabilidad y seguridad </li>
+          <li>Producción y manufactura de piezas a la medida </li>
+          <li>Instalación de anclajes, cuerdas, lona, sistema de riego</li>
+          <li>Prueba de resistencia </li>
+          <li>Instalación y pruebas sistemas de monitoreo </li>
+          <li>Se esparce el sustrato geotextil </li>
+          <li>Introducción de la vegetación por medio de semillas </li>
+          <li>Mantenimiento periodico</li>
+        </ol>
+      </>
+    ),
+  },
 ];
 
 export default () => {
@@ -42,7 +62,7 @@ export default () => {
         <h1 className="font-semibold w-full text-2xl xl:text-4xl mb-4 text-center xl:text-left">
           Requerimientos
         </h1>
-        <div className="grid grid-cols-2 xl:grid-cols-4 gap-2 xl:gap-8 w-full xl:w-[80%] mx-auto p-2 h-full">
+        <div className="grid grid-cols-2 xl:grid-cols-5 gap-2 xl:gap-8 w-full xl:w-[80%] mx-auto p-2 h-full">
           {requerimientos.map((r, i) => (
             <div
               key={r.name}
@@ -75,12 +95,14 @@ export default () => {
                   </div>
                   <div className="flex flex-col gap-2 h-full">
                     <p className="p-4 text-xl">{a.description}</p>
-                    <div className="flex items-center justify-center mb-8 h-[30vh] w-full xl:w-[50%] mx-auto bg-stone-100 rounded-md overflow-hidden">
-                      <img
-                        src={a?.img}
-                        className="w-full h-full object-cover bottom-0"
-                      />
-                    </div>
+                    {a?.img && (
+                      <div className="flex items-center justify-center mb-8 h-[30vh] w-full xl:w-[50%] mx-auto bg-stone-100 rounded-md overflow-hidden">
+                        <img
+                          src={a?.img}
+                          className="w-full h-full object-cover bottom-0"
+                        />
+                      </div>
+                    )}
                   </div>
                 </>
               );
