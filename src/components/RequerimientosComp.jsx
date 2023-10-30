@@ -14,7 +14,7 @@ export const requerimientos = [
     name: "Materiales",
     IconComp: IconWall,
     description:
-      "Se usara alrededor de 52.800 m² de lona, tierra negra, regaderas para el mantenimiento y plantas, en general una conocida como Tulsí.",
+      "Se usara alrededor de 52.800 m² de lona tensada, cuerdas, sistema tensor, mangueras, tierra negra, regaderas para el mantenimiento y plantas, en general una conocida como Tulsí.",
     img: "https://cdn.britannica.com/87/207887-050-F48CB55D/basil.jpg",
   },
   {
