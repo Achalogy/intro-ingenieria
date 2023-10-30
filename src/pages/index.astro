@@ -1,0 +1,205 @@
+---
+import Base from "../layouts/base.astro";
+import {
+  IconUsersGroup,
+  IconEyeCheck,
+  IconFlagCheck,
+  IconPlant2,
+  IconBuildingFactory,
+} from "@tabler/icons-react";
+import RequerimientosComp from "../components/RequerimientosComp";
+import { IconPlantOff } from "@tabler/icons-react";
+import { IconBuildingSkyscraper } from "@tabler/icons-react";
+import { IconCode } from "@tabler/icons-react";
+import { IconStar } from "@tabler/icons-react";
+import { IconBrandBilibili } from "@tabler/icons-react";
+import { IconBrandGithub } from "@tabler/icons-react";
+import { IconBrandGithubFilled } from "@tabler/icons-react";
+---
+
+<Base>
+  <section class="h-screen landing-img">
+    <header class="w-full p-4 bg-white">
+      <a href="/">
+        <h1
+          class="text-center font-semibold text-2xl xl:text-4xl text-emerald-600"
+        >
+          Jardines Flotantes
+        </h1>
+      </a>
+    </header>
+    <div
+      class="relative flex justify-center w-full h-[1.5rem] xl:h-[2.5rem] bg-white"
+    >
+      <div
+        class="absolute h-[3rem] xl:h-[5rem] bg-white w-[95%] xl:w-[80%] shadow-md top-0 rounded-full border border-stone-200 p-1 xl:p-3"
+      >
+        <div
+          class="flex gap-[1px] bg-stone-300 w-full h-full rounded-full text-xs xl:text-lg"
+        >
+          <a href="#nosotros" class="nav-btn rounded-l-full">
+            <IconUsersGroup className="text-teal-500" />
+            <p>Nosotros</p>
+          </a>
+          <a href="#requisitos" class="nav-btn">
+            <IconEyeCheck className="text-teal-500" />
+            <p>Requisitos</p>
+          </a>
+          <a href="#proyecto" class="nav-btn rounded-r-full">
+            <IconFlagCheck className="text-teal-500" />
+            <p>Proyecto</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section
+    class="flex flex-col items-center justify-center gap-8 xl:gap-24 xl:h-[50vh] bg-teal-900 bg-opacity-25 py-8"
+    id="nosotros"
+  >
+    <h1 class="text-center font-semibold text-4xl">Nuestro Equipo</h1>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconCode size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Daniela Atehortua Gonzalez
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconCode size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Juan Cristancho Roncancio
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconCode size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Juan Cardona Montoya
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconBrandBilibili size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Sebastián Medina Barajas
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconStar size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Sara Rodríguez Urueña
+        </p>
+      </div>
+      <div class="flex flex-col items-center justify-center gap-2 xl:gap-6">
+        <div class="bg-white rounded-full p-4">
+          <IconBrandGithub size={45} />
+        </div>
+        <p class="text-base xl:text-xl text-slate-800 font-semibold">
+          Miguel Vargas Contreras
+        </p>
+      </div>
+    </div>
+  </section>
+  <section
+    class="flex flex-col gap-4 items-center justify-center p-4 xl:p-16 xl:px-[15%]"
+  >
+    <IconPlant2 size={85} className="text-emerald-600" />
+    <p class="text-lg xl:text-2xl text-center">
+      Los jardines flotantes son una manera no muy compleja pero sí muy efectiva
+      en su funcionamiento, que es reducir la contaminación. Tener estos
+      jardines en lugares claves alrededor de Bogotá, traería una gran mejoría
+      en la contaminación, por lo cual, durante el paso del tiempo reduciría un
+      gran porcentaje de esta polución.
+    </p>
+  </section>
+  <section id="requisitos" class="flex flex-col gap-2">
+    <RequerimientosComp client:load />
+  </section>
+  <section
+    class="flex flex-col w-[90%] xl:w-2/3 mx-auto m-8 gap-[1px] text-xl bg-stone-300"
+    id="proyecto"
+  >
+    <div class="flex flex-col xl:flex-row gap-2 py-8 bg-[#f5f5f5]">
+      <p
+        class="flex items-center justify-center flex-[2] text-md xl:text-2xl order-2 xl:order-1"
+      >
+        En la ciudad de Bogotá se han presentado altos niveles de material
+        particulado lo cual ha estado afectando directamente la salud de sus
+        habitantes, según estudios, se ha encontrado que hay partes de la ciudad
+        donde se concentra este material particulado
+      </p>
+      <div class="flex items-center justify-center flex-1 order-1 xl:order-2">
+        <IconBuildingFactory size={200} className="text-red-300" />
+      </div>
+    </div>
+    <div class="flex flex-col xl:flex-row gap-2 py-8 bg-[#f5f5f5]">
+      <div class="flex items-center justify-center flex-1">
+        <IconBuildingSkyscraper size={200} className="text-emerald-300" />
+      </div>
+      <div class="flex flex-col gap-4 flex-[2]">
+        <p class="flex items-center justify-center text-md xl:text-2xl">
+          Es decir hay mayor contaminación y al ver distintos factores, se puede
+          evidenciar que las zonas con altas concentraciones poseen
+          características similares como:
+        </p>
+        <ul>
+          <li>Vegetación escasa o pobre</li>
+          <li>
+            Lugares amplios para la gente, pero con poca sombra ya sea para el
+            sol o las lluvias
+          </li>
+          <li>
+            La movilidad vehicular colapsa, ya sea por mal diseño de vías o
+            demasiada concentración vehicular
+          </li>
+          <li>Concentración de pequeñas industrias</li>
+          <li>Densidad demográfica elevada</li>
+          <li>Recursos económicos medio-bajos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer
+    class="flex flex-col gap-2 items-center justify-center h-[30vh] bg-emerald-500"
+  >
+    <p class="text-white text-2xl font-semibold">
+      Creado por <a
+        class="underline"
+        href="https://github.com/achalogy"
+        target="_blank">Achalogy</a
+      >
+    </p>
+    <p class="flex gap-2 text-white text-2xl">
+      Repositorio Público: <a
+        target="_blank"
+        class="underline font-semibold flex gap-2 items-center"
+        href="https://github.com/achalogy/intro-ingenieria"
+      >
+        Ir a Github <IconBrandGithubFilled />
+      </a>
+    </p>
+  </footer>
+
+  <style>
+    .nav-btn {
+      @apply flex gap-2 bg-white flex-1 items-center justify-center font-semibold;
+    }
+
+    .landing-img {
+      /* Tomado de https://www.singulargreen.com/green-shades-toldos-vegetales/ */
+      background-image: url("https://www.singulargreen.com/wp-content/uploads/2023/02/toldos-plano-por-detras-1-scaled.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</Base>
